@@ -1,0 +1,117 @@
+{
+    "database": {
+        "type": "sqlite",
+        "path": "D:\\Training\\BizzInsight_pro\\data/database/business.db",
+        "host": "localhost",
+        "port": 5432,
+        "name": "business_intelligence",
+        "username": "",
+        "password": "",
+        "pool_size": 5,
+        "echo_sql": false,
+        "auto_backup": true,
+        "backup_interval_hours": 24
+    },
+    "ui": {
+        "theme": "dark",
+        "font_family": "Segoe UI",
+        "font_size": 11,
+        "window_width": 1400,
+        "window_height": 800,
+        "max_recent_files": 10,
+        "language": "en",
+        "animations_enabled": true,
+        "tooltips_enabled": true,
+        "confirm_exit": true,
+        "auto_save_interval": 300
+    },
+    "ml": {
+        "model_storage_path": "D:\\Training\\BizzInsight_pro\\src/ml/models/",
+        "training_data_path": "D:\\Training\\BizzInsight_pro\\data/ml/training/",
+        "test_size": 0.2,
+        "random_state": 42,
+        "cross_validation_folds": 5,
+        "auto_retrain_days": 7,
+        "default_algorithm": "random_forest",
+        "feature_scaling": true,
+        "hyperparameter_tuning": true,
+        "random_forest": {
+            "n_estimators": 100,
+            "max_depth": null,
+            "min_samples_split": 2
+        },
+        "linear_regression": {
+            "fit_intercept": true
+        },
+        "gradient_boosting": {
+            "n_estimators": 100,
+            "learning_rate": 0.1,
+            "max_depth": 3
+        }
+    },
+    "reports": {
+        "default_format": "pdf",
+        "output_directory": "D:\\Training\\BizzInsight_pro\\reports/",
+        "company_name": "Business Intelligence Inc.",
+        "company_logo": null,
+        "header_color": "#1a237e",
+        "footer_text": "Confidential - For Internal Use Only",
+        "auto_generate_daily": false,
+        "include_charts": true,
+        "include_recommendations": true,
+        "email_enabled": false,
+        "email_recipients": [],
+        "email_subject": "Business Intelligence Report",
+        "email_body_template": "Attached is the latest business intelligence report."
+    },
+    "security": {
+        "encryption_enabled": true,
+        "encryption_key_path": "D:\\Training\\BizzInsight_pro\\config/keys/",
+        "session_timeout_minutes": 30,
+        "max_login_attempts": 5,
+        "password_policy": {
+            "min_length": 8,
+            "require_uppercase": true,
+            "require_lowercase": true,
+            "require_numbers": true,
+            "require_special_chars": true
+        },
+        "api_key_enabled": false,
+        "api_key_header": "X-API-Key",
+        "cors_allowed_origins": [
+            "http://localhost:3000"
+        ]
+    },
+    "performance": {
+        "cache_enabled": true,
+        "cache_ttl_seconds": 300,
+        "query_timeout_seconds": 30,
+        "max_workers": 4,
+        "batch_size": 1000,
+        "compression_enabled": true,
+        "lazy_loading": true,
+        "max_memory_mb": 1024,
+        "auto_cleanup_interval_hours": 1
+    },
+    "notifications": {
+        "enabled": true,
+        "sound_enabled": true,
+        "desktop_notifications": true,
+        "email_notifications": false,
+        "sales_alert_threshold": 10000.0,
+        "inventory_alert_threshold": 10,
+        "error_alert_threshold": 5,
+        "slack_webhook": null,
+        "teams_webhook": null,
+        "telegram_bot_token": null
+    },
+    "app_name": "Business Intelligence System",
+    "app_version": "1.0.0",
+    "app_description": "Comprehensive Business Intelligence Platform",
+    "developer_mode": false,
+    "debug_mode": false,
+    "log_level": "INFO",
+    "data_dir": "D:\\Training\\BizzInsight_pro\\data/",
+    "logs_dir": "D:\\Training\\BizzInsight_pro\\logs/",
+    "temp_dir": "D:\\Training\\BizzInsight_pro\\temp/"
+}
