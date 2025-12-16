@@ -1,0 +1,45 @@
+
+### **Create Configuration File** (`src/utils/config.py`):
+
+```python
+import json
+import os
+
+def load_config():
+    """Load configuration from file or create default"""
+    config_path = os.path.join(os.path.dirname(__file__), 'config.json')
+    
+    default_config = {
+        "database": {
+            "path": "data/database/business.db",
+            "type": "sqlite"
+        },
+        "appearance": {
+            "theme": "light",
+            "font": "Arial",
+            "font_size": 10
+        },
+        "reports": {
+            "default_format": "PDF",
+            "auto_generate": False
+        },
+        "ml": {
+            "model_path": "src/ml/models/",
+            "retrain_days": 7
+        }
+    }
+    
+    if os.path.exists(config_path):
+        with open(config_path, 'r') as f:
+            return json.load(f)
+    else:
+        # Save default config
+        with open(config_path, 'w') as f:
+            json.dump(default_config, f, indent=4)
+        return default_config
+
+def save_config(config):
+    """Save configuration to file"""
+    config_path = os.path.join(os.path.dirname(__file__), 'config.json')
+    with open(config_path, 'w') as f:
+        json.dump(config, f, indent=4)
